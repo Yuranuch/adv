@@ -1,15 +1,90 @@
 body {
   background: blueviolet;
-  background-image: url("../img/background-img.jpg"); }
+  background-image: url("../img/background-img.jpg");
+  font-family: 'Rubik', sans-serif; }
+
+div, a {
+  box-sizing: border-box; }
 
 .container {
+  border-left: 1px solid rgba(250, 250, 250, 0.3);
+  border-bottom: 1px solid rgba(250, 250, 250, 0.3);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; }
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr; }
 
-.container > div {
-  padding: 1em; }
-
+/* section adjustments */
 .section {
-  box-shadow: 0 0 1px rgba(255, 255, 255, 0.6); }
+  border-top: 1px solid rgba(250, 250, 250, 0.3);
+  border-right: 1px solid rgba(250, 250, 250, 0.3); }
+  .section > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    text-decoration: none; }
+
+.section__logo {
+  padding: 7% 0 0 0; }
+  .section__logo a {
+    display: inline-block;
+    width: auto;
+    height: auto; }
+
+.section__navigation {
+  padding: 3% 10% 0 10%; }
+  .section__navigation > div {
+    display: flex;
+    justify-content: space-between; }
+    .section__navigation > div a {
+      font-size: 16px;
+      line-height: 23px;
+      text-decoration: none;
+      color: #FFF; }
+
+.section__form {
+  display: flex; }
+  .section__form > div {
+    display: flex;
+    justify-content: space-between; }
+    .section__form > div a {
+      font-size: 16px;
+      line-height: 23px;
+      width: 46px;
+      height: 46px;
+      display: block;
+      text-decoration: none;
+      color: #FFF; }
+
+.form__search {
+  background-image: url("../img/icons/search.png");
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.form__nav {
+  box-sizing: border-box;
+  padding: 0 11px;
+  margin-top: 10px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .form__nav span {
+    display: block;
+    height: 2.1px;
+    margin-bottom: 5.80px;
+    background: white;
+    border-radius: 10px; }
+  .form__nav span:last-child {
+    margin: 0; }
 
 /*# sourceMappingURL=style.css.map */
