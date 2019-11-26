@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%; }
+
+.container > div {
+  padding: 1em; }
+
+.section {
+  border: 1px solid gray; }
+
+/*# sourceMappingURL=style.css.map */
