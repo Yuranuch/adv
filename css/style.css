@@ -1,11 +1,15 @@
+body {
+  background: blueviolet;
+  background-image: url("../img/background-img.jpg"); }
+
 .container {
   display: grid;
-  grid-template-columns: 33% 33% 33%; }
+  grid-template-columns: 1fr 1fr 1fr; }
 
 .container > div {
   padding: 1em; }
 
 .section {
-  border: 1px solid gray; }
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.6); }
 
 /*# sourceMappingURL=style.css.map */
