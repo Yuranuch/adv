@@ -1,0 +1,20 @@
+/*1601-1920px*/
+/*1369-1600px*/
+/*961-1368px*/
+@media screen and (max-width: 1368px) {
+  .content-org-wrapp {
+    padding-left: 30px;
+    padding-right: 30px; }
+    .content-org-wrapp .content-org {
+      /*--org-info--*/ }
+      .content-org-wrapp .content-org .org-info h2 {
+        font-size: 50px !important; }
+
+  /*--content-org-wrapp--*/
+  .offers-bl {
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  /*--offers-bl--*/ }
+
+/*# sourceMappingURL=adaptive.css.map */
