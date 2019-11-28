@@ -360,8 +360,8 @@ div, a {
     padding-top: 30px; }
 
   .section__navigation a {
-    font-size: 16px;
-    line-height: 18px; }
+    font-size: 16px !important;
+    line-height: 18px !important; }
   .section__navigation .section__content img {
     width: 120px;
     height: 120px; }
@@ -396,12 +396,12 @@ div, a {
     padding-top: 30px; }
 
   .section__list a {
-    font-size: 13px;
-    margin-bottom: 5px; }
+    font-size: 13px !important;
+    margin-bottom: 5px !important; }
 
   .section__navigation a {
-    font-size: 14px;
-    line-height: 18px; }
+    font-size: 14px !important;
+    line-height: 18px !important; }
 
   .section__content img {
     width: 100px;
@@ -429,12 +429,12 @@ div, a {
     padding-top: 30px; }
 
   .section__list a {
-    font-size: 11px;
-    margin-bottom: 5px; }
+    font-size: 11px !important;
+    margin-bottom: 5px !important; }
 
   .section__navigation a {
-    font-size: 10px;
-    line-height: 14px; }
+    font-size: 10px !important;
+    line-height: 14px !important; }
 
   .section__content img {
     width: 100px;
@@ -462,12 +462,12 @@ div, a {
     padding-top: 30px; }
 
   .section__list a {
-    font-size: 11px;
-    margin-bottom: 7px; }
+    font-size: 11px !important;
+    margin-bottom: 7px !important; }
 
   .section__navigation a {
-    font-size: 10px;
-    line-height: 14px; }
+    font-size: 10px !important;
+    line-height: 14px !important; }
 
   .section__content img {
     width: 80px;
@@ -495,12 +495,12 @@ div, a {
     padding-top: 10px; }
 
   .section__list a {
-    font-size: 8px;
-    margin-bottom: 0; }
+    font-size: 8px !important;
+    margin-bottom: 0 !important; }
 
   .section__navigation a {
-    font-size: 8px;
-    line-height: 12px; }
+    font-size: 8px !important;
+    line-height: 12px !important; }
 
   .section__content img {
     width: 60px;
@@ -528,8 +528,8 @@ div, a {
     padding-top: 5px; }
 
   .section__list a {
-    font-size: 9px;
-    margin-bottom: 0; }
+    font-size: 9px !important;
+    margin-bottom: 0 !important; }
 
   .section__navigation > div {
     display: flex;
@@ -607,7 +607,7 @@ div, a {
     justify-content: center;
     flex-wrap: wrap; }
     .section__list a {
-      font-size: 14px;
+      font-size: 14px !important;
       line-height: 17px;
       margin: 0 5px 15px 5px;
       width: 120px;
