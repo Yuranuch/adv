@@ -19,16 +19,29 @@
 
 <div class="container">
     <div id="block_id" class="menu">
-        <a href="#">главная</a>
-        <a href="#">каталог</a>
-        <a href="#">проекты</a>
-        <a href="#">о компании</a>
-        <a href="#">контакты</a>
-        <div onclick="menu_hide('#block_id');return false;" class="menu__esc">X</div>
+        <div class="menu__content">
+            <a href="#">главная</a>
+            <a href="#">каталог</a>
+            <a href="#">проекты</a>
+            <a href="#">компании</a>
+            <a href="#">контакты</a>
+        </div>
+        <div onclick="menu_hide('#block_id');return false;" class="menu__esc">
+            <img src="./img/icons/close.png" alt="">
+        </div>
     </div>
     <div id="block_id2" class="search">
-        найти
-        <div onclick="search_hide('#block_id2');return false;" class="search__esc">X</div>
+        <div class="search__content">
+            <div onclick="search_hide('#block_id2');return false;" class="search__esc">
+                <img src="./img/icons/close.png" alt="">
+            </div>
+            <div class="search__input">
+                <input type="text" placeholder="Авто">
+            </div>
+            <div class="search__button">
+                <span class="search__button_background">найти</span>
+            </div>
+        </div>
     </div>
     <div class="section section__logo">
         <a href="#">

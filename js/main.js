@@ -54,14 +54,14 @@ function menu_hide(blockId) {
 function search_show(blockId) {
     var par = document.getElementsByClassName('form__nav');
     if ($(blockId).css('display') == 'none') {
-        $(blockId).animate({height: 'show'}, 500);
+        $(blockId).animate({height: 'show'}, 800);
         par[0].classList.add("active")
     }
 }
 function search_hide(blockId) {
-    var par = document.getElementsByClassName('esc');
+    var par = document.getElementsByClassName('search__esc');
     if ($(blockId).css('display') == 'block') {
-        $(blockId).animate({height: 'hide'}, 500);
+        $(blockId).animate({height: 'hide'}, 800);
         par[0].classList.remove("active")
     }
 }
