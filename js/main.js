@@ -1,101 +1,67 @@
-$(document).ready(function () {
-//-----slick-slider  
-$(document).on('ready', function() {
-  $(".lazy").slick({
-        lazyLoad: 'ondemand', // ondemand progressive anticipated
-        dots: true,
-        infinite: true,
-        arrows: false,
-        //autoplay: true
-      });
+$(document).ready(function(){
+    $('.backgroundTransition').backgroundTransition({
+        backgrounds:[
+            { src: 'http://winallos.com/uploads/posts/2014-12/1417410095_fon-priroda-shirokoformatnye-nebo.jpg' },
+            { src: 'https://w-dog.ru/wallpapers/10/19/346843697827766/priroda-pirs-most-re-reka-voda-zakat-vecher-krasivo-fon-oboi-shirokoformatnye-polnoekrannye-shirokoekrannye.jpg' },
+            { src: 'https://images7.alphacoders.com/880/880818.jpg' }
+        ],
+        transitionDelay: 10,
+        animationSpeed: 500
+    });
 });
-//------stiky-header
- $("#top-menu li a, .single-link a").click(function() {
-    var elementClick = $(this).attr("href")
-    var destination = $(elementClick).offset().top -70;
-    $("#top-menu li a").removeClass('active');
-    $(this).addClass('active');
-    jQuery("html:not(:animated),body:not(:animated)").animate({
-      scrollTop: destination
-    }, 800);
-    return false;
-  });
-//-----same-box-height    
-$('.l1-bottom').each(function(){
-  var highestBox = 0;
-  $('.l1-bottom-ins', this).each(function(){
-    if($(this).height() > highestBox) {
-      highestBox = $(this).height();
+
+
+!function(e,a,i,n){var o=function(a,i){this.elem=a,this.$elem=e(a),this.options=i,self=this};o.prototype={defaults:{classNameBottomImage:"image-bottom",classNameTopImage:"image-top",idNameDownloadImage:"image-download",backgrounds:[],imageKey:1,transitionDelay:10,animationSpeed:1e3},init:function(){return this.config=e.extend({},this.defaults,this.options),this.config.backgrounds.length>=2?(this.prepareMarkup(),this.loadNext(),this):(console.warn("BackgroundTransition requires at least 2 background images."),!1)},prepareMarkup:function(){var a=e("<div/>").addClass(this.config.classNameBottomImage+" initial").css("background-image","url("+this.config.backgrounds[0].src+")"),i=e("<div/>").addClass(this.config.classNameTopImage).css("display","none");e(this.elem).prepend(a,i).css("background-image","none")},loadNext:function(){this.config.imageKey==this.config.backgrounds.length&&(this.config.imageKey=0);var a=e.Deferred();e("<img/>").attr("id",this.config.idNameDownloadImage).load(function(){a.resolve()}).attr("src",this.config.backgrounds[this.config.imageKey].src).prependTo("body .backgroundTransition"),a.done(function(){setTimeout(self.replaceImage,1e3*self.config.transitionDelay)})},replaceImage:function(){var a=e("#"+self.config.idNameDownloadImage);e("#"+self.config.idNameDownloadImage).remove(),e("."+self.config.classNameTopImage).css("background-image","url("+a.attr("src")+")"),e("."+self.config.classNameTopImage).fadeIn(self.config.animationSpeed,"swing",function(){e("."+self.config.classNameBottomImage).css("background-image","url("+a.attr("src")+")"),e(this).hide(),self.config.imageKey++,self.loadNext()})}},o.defaults=o.prototype.defaults,e.fn.backgroundTransition=function(e){return this.each(function(){new o(this,e).init()})}}(jQuery,window,document);
+
+$(document).ready(function(){
+
+    $(function (){
+        // $("#back-top").hide();
+
+        $(window).scroll(function (){
+            if ($(this).scrollTop() > 500){
+                $("#back-top").fadeIn();
+            } else{
+                $("#back-top").fadeOut();
+            }
+        });
+
+        $("#back-top a").click(function (){
+            $("body,html").animate({
+                scrollTop:0
+            }, 800);
+            return false;
+        });
+    });
+});
+
+
+function menu_show(blockId) {
+    var par = document.getElementsByClassName('form__nav');
+    if ($(blockId).css('display') == 'none') {
+        $(blockId).animate({width: 'show'}, 500);
+        par[0].classList.add("active")
     }
-  });
-  $('.l1-bottom-ins',this).height(highestBox);
-});
-//--------lada-loader------
-/*var buttons = document.querySelectorAll( '.ladda-button' );
-
-Array.prototype.slice.call( buttons ).forEach( function( button ) {
-
-  var resetTimeout;
-
-  button.addEventListener( 'click', function() {
-
-    if( typeof button.getAttribute( 'data-loading' ) === 'string' ) {
-      button.removeAttribute( 'data-loading' );
+}
+function menu_hide(blockId) {
+    var par = document.getElementsByClassName('menu__esc');
+    if ($(blockId).css('display') == 'block') {
+        $(blockId).animate({width: 'hide'}, 500);
+        par[0].classList.remove("active")
     }
-    else {
-      button.setAttribute( 'data-loading', '' );
+}
+
+function search_show(blockId) {
+    var par = document.getElementsByClassName('form__nav');
+    if ($(blockId).css('display') == 'none') {
+        $(blockId).animate({height: 'show'}, 500);
+        par[0].classList.add("active")
     }
-
-    clearTimeout( resetTimeout );
-    resetTimeout = setTimeout( function() {
-      button.removeAttribute( 'data-loading' );     
-    }, 2000 );
-
-  }, false );
-
-} );
-*/
-//--------sweet-alert-init
-/*
-$('.alert1').click(function(){
-  swal({
-    title: "Good job!",
-    text: "You clicked the button!",
-    type: "success",
-    confirmButtonColor: "#34d2d1",
-  });
-});
-
-$('.alert2').click(function () {
-  swal({
-    title: "Are you sure?",
-    text: "You will not be able to recover this imaginary file!",
-    type: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#34d2d1",
-    confirmButtonText: "Yes, delete it!",
-    closeOnConfirm: false
-  }, function () {
-    swal("Deleted!", "Your imaginary file has been deleted.", "success");
-  });
-});
-*/
-//.error - розовая рамка (для input[type='text'],textarea)
-//-------modal
-$(".popup-link").click(function()
-{
- $('#mask').fadeIn(300);
- var iddiv = $(this).attr("iddiv");
- $('#'+iddiv).addClass('active');
- $('#mask').attr('opendiv',iddiv);
- return false;
-});
-
-$('#mask, .box-close, #top-menu li a').click(function()
-{
- var iddiv = $("#mask").attr('opendiv');
- $('#mask').fadeOut(300);
- $('#'+iddiv).removeClass('active');
-});
-$('.custom-sel').selectize();
-});
+}
+function search_hide(blockId) {
+    var par = document.getElementsByClassName('esc');
+    if ($(blockId).css('display') == 'block') {
+        $(blockId).animate({height: 'hide'}, 500);
+        par[0].classList.remove("active")
+    }
+}

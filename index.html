@@ -5,14 +5,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>adv</title>
     <link href="css/style.css" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900&display=swap&subset=cyrillic"
           rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 <body>
+
+
+<div class="backgroundTransition">
+
 <div class="container">
+    <div id="block_id" class="menu">
+        <a href="#">главная</a>
+        <a href="#">каталог</a>
+        <a href="#">проекты</a>
+        <a href="#">о компании</a>
+        <a href="#">контакты</a>
+        <div onclick="menu_hide('#block_id');return false;" class="menu__esc">X</div>
+    </div>
+    <div id="block_id2" class="search">
+        найти
+        <div onclick="search_hide('#block_id2');return false;" class="search__esc">X</div>
+    </div>
     <div class="section section__logo">
         <a href="#">
             <img src="./img/icons/logo.png" alt="">
@@ -28,10 +45,10 @@
         </div>
     </div>
     <div class="section section__form">
-        <a class="form__search" href="">
+        <a onclick="search_show('#block_id2');return false;" class="form__search" href="">
             <img src="./img/icons/search.png" alt="">
         </a>
-        <a class="form__nav" href="">
+        <a onclick="menu_show('#block_id');return false;" class="form__nav" href="">
             <div>
                 <span></span>
                 <span></span>
@@ -105,17 +122,19 @@
             <img src="img/tools.png" alt="">
         </div>
     </div>
+    <div id="back-top"><a href="#top"><span></span>Наверх</a></div>
     <div class="section section__catalog">
         <span>каталог ©</span>
         <span class="mobile-display">разработка сайта</span>
     </div>
-    <div class="section"></div>
     <div class="section section__catalog section__catalog_align-left">
         <span>разработка сайта</span>
     </div>
 </div>
+</div>
 
-<script src="js/jquery.min.js"></script>
+
+<!--<script src="js/jquery.min.js"></script>-->
 <script src="js/main.js"></script>
 </body>
 </html>
